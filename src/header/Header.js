@@ -1,8 +1,10 @@
 import React from 'react';
-import {Navigation} from '../navigation'
+import {Navigation} from '../navigation';
 import './header.scss';
-export const Header = () => {
+export const Header = () => (
     <header className="header">
-        <Navigation/>
+        <div className="container">
+            <Navigation/>
+        </div>
     </header>
-};
+);

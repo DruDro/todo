@@ -1,3 +1,21 @@
-body {
-    background: #000;
+.main-nav {
+  & > ul {
+    display:table;
+    width:100%;
+    margin:0;
+    padding:0;
+    list-style:none;
+    padding:15px 0;
+    & > li {
+      display:table-cell;
+    }
+  }
+}
+
+.side-nav {
+  & > ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
 }

@@ -1,19 +1,17 @@
 import React from 'react';
 
+import './app.scss';
 import { Header } from './header'; 
 import { Main } from './main'; 
 import { Footer } from './footer'; 
-import { Error } from './error'; 
-import 'app.scss';
+//import { Msg } from './msg'; 
 
-import {
-    Navigation
-} from './Navigation';
+
 
 export const App = (
-    <div>
+    <div className="wrapper">
         <Header />
-        <Error />
+        {/*<Msg type="warning" msg="Warning" />*/}
         <Main />
         <Footer />
     </div>

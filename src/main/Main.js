@@ -1,7 +1,14 @@
-import React from 'react';
-import './main.scss';
-export const Main = () => {
-    <main className="main">
-        <p>main</p>
-    </main>
-};
+    import React from 'react';
+    import './main.scss';
+
+    import {Aside} from './aside';
+    import {Article} from './content';
+
+    export const Main = () => (
+        <section className="main">
+            <div className="container">
+                <Aside/>
+                <Article/>
+            </div>
+        </section>
+    );

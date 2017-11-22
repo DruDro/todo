@@ -7,19 +7,12 @@ const args = require('yargs').argv;
 let styleLoader = ['style-loader', 'css-loader', 'sass-loader'];
 
 const plugins = [
-    new htmlPlugin({
-        template: 'index.html'
-    }),
-    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' }),
+    new htmlPlugin({template: 'index.html'}),
+    new webpack
+        .optimize
+        .CommonsChunkPlugin({name: 'vendor'}),
     new webpack.HotModuleReplacementPlugin(),
-    textPlugin.extract({
-        fallback: "style-loader",
-        use: ["css-loader", "sass-loader"]
-    }),
-    new textPlugin({
-        filename: 'main-[contenthash].css',
-        allChunks: true
-    })
+    new textPlugin({filename: 'main-[contenthash].css', allChunks: true})
 ];
 
 module.exports = {
@@ -40,19 +33,31 @@ module.exports = {
                 exclude: path.resolve(__dirname, 'node_modules'),
                 use: {
                     loader: 'babel-loader',
-                    options: { presets: ['env', 'react'] }
+                    options: {
+                        presets: ['env', 'react']
+                    }
                 }
-            },
-
-            {
+            }, {
                 test: /\.s?css$/,
                 use: textPlugin.extract({
                     fallback: "style-loader",
-                    use: ["css-loader", "sass-loader"]
+                    use: [
+                        {
+                            loader: "css-loader",
+                            options: {
+                                sourceMap: true
+                            }
+                        }, {
+                            loader: "sass-loader",
+                            options: {
+                                sourceMap: true
+                            }
+                        }
+                    ]
                 })
 
             }
-        ],
+        ]
     },
 
     plugins,
