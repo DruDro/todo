@@ -1,12 +1,13 @@
-
+.footer {
+  padding: 15px 0;
+	box-shadow: 0 6px 8px -4px rgba(#000, .5) inset;
+}
 
 .footer, .footer .container {
-    background: #666;
-    color:#fff;
-    display:flex;
-    flex-flow:column nowrap;
-    align-items:center;
-    justify-content:center;
+	background: #eee;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .footer .container {
   background: transparent;

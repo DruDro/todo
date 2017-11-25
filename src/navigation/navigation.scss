@@ -1,13 +1,17 @@
 .main-nav {
   & > ul {
-    display:table;
+    display:flex;
+    width:100%;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content:center;
     width:100%;
     margin:0;
     padding:0;
     list-style:none;
     padding:15px 0;
     & > li {
-      display:table-cell;
+      margin: 0 15px;
     }
   }
 }
