@@ -1,10 +1,8 @@
 import React from 'react';
 
-const ignoreClick = (e) => { e.preventDefault(); e.stopPropagation(); };
-
 export const NavLink = (props) => (
   <li>
-    <a className="btn" href={ props.href || `#`  } title={ props.title || `` } onClick={ ignoreClick }>{ props.title || ``}</a>
+    <a className="btn" href={ props.href || `#`  } title={ props.title || `` }>{ props.title || ``}</a>
   </li>
 );
             

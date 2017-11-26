@@ -15,17 +15,17 @@ export class Article extends React.Component {
         };
     }
     getUsers = () => {
-        this.setState({loading: true, users: []});
+        this.setState({preloader: true, users: []});
 
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
-            .then(users => this.setState({users, loading: false}));
+            .then(users => this.setState({users, preloader: false}));
     }
     showEmail(user) {
-        alert(` ${user.email}: ${user.phone}`);
+        alert(`${user.email}: ${user.phone}`);
     }
     render() {
-        const {users, loading} = this.state;
+        const {users, preloader} = this.state;
         return (
 
             <article className="main__content">
@@ -33,11 +33,10 @@ export class Article extends React.Component {
                 <Counter/>
 
                 <button
-                    onClick={this.getUsers.bind(this)}>Get users</button>
-                <Persons
-                    users={users}
-                    clickHandler={this.showEmail} />
-                { loading && <span>Loading...</span> }
+                    onClick={this
+                    .getUsers
+                    .bind(this)}>Get users</button>
+                <Persons users={users} clickHandler={this.showEmail}/> {preloader && <span>Loading...</span>}
             </article>
         )
     }
