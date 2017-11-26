@@ -5,9 +5,9 @@ import { NavLink } from './NavLink';
 export const Navigation = (props) => (
     <nav className={ props.scope || `main-nav` }>
         <ul>
-            <NavLink title="Home" />
-            <NavLink title="Products" />
-            <NavLink title="Contacts" />
+            <NavLink href="/home" title="Home" />
+            <NavLink href="/products"  title="Products" />
+            <NavLink href="/contacts"  title="Contacts" />
         </ul>
     </nav>
 );

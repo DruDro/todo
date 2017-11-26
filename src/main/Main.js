@@ -1,14 +1,19 @@
-    import React from 'react';
-    import './main.scss';
+import React from 'react';
+import './main.scss';
 
-    import {Aside} from './aside';
-    import {Article} from './content';
 
-    export const Main = () => (
-        <section className="main">
-            <div className="container">
-                <Aside/>
-                <Article/>
-            </div>
-        </section>
-    );
+import {Aside} from './aside';
+import {Article} from './content';
+
+export class Main extends React.Component {
+    render() {
+        return (
+            <section className="main">
+                <div className="container">
+                    <Aside/>
+                    <Article/>
+                </div>
+            </section>
+        )
+    }
+}
