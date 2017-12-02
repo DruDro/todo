@@ -1,0 +1,27 @@
+.nav-tab {
+    ul {
+        display:flex;
+        flex-flow:row nowrap;
+        align-items:center;
+        justify-content: flex-start;
+        margin:0;
+        padding:0;
+        list-style:none;
+        li {
+            margin:0 5px 0 0;
+            padding:0;
+        }
+    }
+}
+
+.tab-content {
+    border:1px solid #150031;
+    border-radius:3px;
+}
+.btn--tab {
+    background:#fff;
+    color:#150031;
+    border:1px solid #150031;
+    border-bottom:1px solid #fff;
+    margin:0 3px -1px; 
+  }

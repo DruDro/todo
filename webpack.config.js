@@ -7,6 +7,11 @@ const args = require('yargs').argv;
 let styleLoader = ['style-loader', 'css-loader', 'sass-loader'];
 
 const plugins = [
+    new webpack.ProvidePlugin({
+        React: 'react',
+        jquery: 'jquery',
+        PropTypes: 'prop-types'
+    }),
     new htmlPlugin({template: 'index.html'}),
     new webpack
         .optimize
