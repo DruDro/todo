@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './greeting.scss';
 
 const time = () => {
@@ -35,4 +35,8 @@ export const Greeting = (props) => {
         : ''}!`}
     </div>
   )
+};
+
+Greeting.propTypes = {
+  name: PropTypes.string.isRequired
 };
