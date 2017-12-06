@@ -1,13 +1,17 @@
-
+import React, {Component}  from 'react';
 import './navigation.scss';
 import { NavLink } from './NavLink';
 
-export const Navigation = (props) => (
-    <nav className={ props.scope || `main-nav` }>
-        <ul>
-            <NavLink href="/home" title="Home" />
-            <NavLink href="/products"  title="Products" />
-            <NavLink href="/contacts"  title="Contacts" />
-        </ul>
-    </nav>
-);
+
+export class Navigation extends Component {
+    render(){
+        return (
+            <nav className={ this.props.scope || `main-nav` }>
+            <ul>
+                { this.props.navlinks.map(navlink => <li key={ Math.random() }><NavLink href={`/${navlink}` } title={`${navlink}` } /></li>) }
+            </ul>
+        </nav>
+        );
+
+};
+}

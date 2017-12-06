@@ -6,7 +6,7 @@ export const Header = () => (
     <header className="header">
         <div className="container">
             <Greeting name='' /> {/*name can be passed*/}
-            <Navigation />
+            <Navigation navlinks={ ['Home', 'Products', 'Contucts'] } />
         </div>
     </header>
 );
