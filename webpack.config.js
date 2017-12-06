@@ -9,7 +9,7 @@ let styleLoader = ['style-loader', 'css-loader', 'sass-loader'];
 const plugins = [
     new webpack.ProvidePlugin({
         React: 'react',
-        jquery: 'jquery',
+        $: 'jquery',
         PropTypes: 'prop-types'
     }),
     new htmlPlugin({template: 'index.html'}),

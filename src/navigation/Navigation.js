@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+
 import './navigation.scss';
 import {NavLink} from './NavLink';
 
 
-export class Navigation extends Component {
+export class Navigation extends React.Component {
     render() {
         return (
             <nav className={this.props.scope || `main-nav`}>

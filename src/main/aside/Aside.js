@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './aside.scss';
 import { Navigation} from '../../navigation';
 
