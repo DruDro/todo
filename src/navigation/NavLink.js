@@ -1,6 +1,9 @@
 import React from 'react';
 
 export const NavLink = (props) => (
-    <a className="btn" href={ props.href || `#`  } title={ props.title || `` }>{ props.title || ``}</a>
+        <a  className="btn" 
+            href={ props.href || `#` } 
+            title={ props.title || `` } >
+            { props.title || `` }
+        </a>
 );
-            
