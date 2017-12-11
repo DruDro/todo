@@ -1,0 +1,21 @@
+.table-div {
+  display:table;
+}
+.btn-toggle{
+  display:table-cell;
+  vertical-align:middle;
+  &+.toggleText {
+    display:none;
+  }
+  &.active{
+    background:red;
+    &+.toggleText {
+      display:table-cell;
+      vertical-align:middle;
+    }
+  }
+  &.disabled {
+    background:#aaa;
+    pointer-events:none;
+  }
+}
