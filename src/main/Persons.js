@@ -1,15 +1,19 @@
-export const Persons = ({ users, clickHandler, userName, userPosts }) => (
+export const Persons = ({users, clickHandler, userName, userPosts}) => (
   <section className="section-users">
-    <ul className="users">
-      {
-        users.map(user => <li key={ user.id } onClick={ () => clickHandler(user) }>{user.name}</li>)
-      }
-    </ul>
+    <div className="users">
+      <header>
+        <h3>Users</h3>
+      </header>
+      <ul>
+        {users.map(user => <li key={user.id} onClick={() => clickHandler(user)}>{user.name}</li>)
+}
+      </ul>
+    </div>
     <section className="user-posts">
       <header>
-        <h2>{`${userName} Posts`}</h2>
+        <h3>{ `${userName ? `${userName}` : 'User'}'s Posts`}</h3>
       </header>
-      <main>{userPosts.map(post => <article key={post.id}>{post.body}<hr /></article>)}</main>
+      <main>{userPosts.map(post => <article key={post.id}>{post.body}<hr color="#eee" /></article>)}</main>
     </section>
   </section>
 );

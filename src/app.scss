@@ -67,7 +67,7 @@ a {
   }
 }
 
-button, .btn {
+button, .btn, [type="button"],[type="submit"] {
   outline:0;
   border:0;
   display:inline-block;
@@ -80,4 +80,9 @@ button, .btn {
   color:#fff;
   margin: 3px;
   text-decoration: none;
+  transition:all .15s ease-in-out;
+  cursor:pointer;
+  &:hover{
+    background:lighten(#150031,10%);
+  }
 }
