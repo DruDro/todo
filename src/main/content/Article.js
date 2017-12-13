@@ -3,6 +3,7 @@ import { Counter } from '../Counter';
 import { Persons } from '../Persons';
 import { Numbers } from '../../numbers';
 import { Tabs, TabContent, Tab, Tablink, TabNav } from '../../tabs';
+import { Form } from '../../form';
 import { ButtonToggleText } from '../button';
 import { Geo } from '../geo';
 
@@ -133,7 +134,7 @@ export class Article extends React.Component {
             </TabContent>
           </Tab>
         </Tabs>
-
+<Form />
       </article>
     );
   }
