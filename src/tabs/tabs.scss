@@ -17,11 +17,20 @@
 .tab-content {
     border:1px solid #150031;
     border-radius:3px;
+    position:relative;
+    z-index:1;
+    background:#fff;
 }
 .btn--tab {
-    background:#fff;
+    background:#e5e5e5;
     color:#150031;
     border:1px solid #150031;
-    border-bottom:1px solid #fff;
-    margin:0 3px -1px; 
+    margin:0 -3px -1px 0; 
+    box-shadow:0 0 10px -3px #000;
+    position:relative;
+    z-index:0;
+  }
+  .active .btn--tab {
+      background:#fff;
+      border-bottom-color:#fff;
   }

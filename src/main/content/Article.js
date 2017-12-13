@@ -2,25 +2,11 @@ import './article.scss';
 import { Counter } from '../Counter';
 import { Persons } from '../Persons';
 import { Numbers } from '../../numbers';
-import { Tabs } from '../../tabs';
-import {ButtonToggleText } from '../button';
+import { Tabs, TabContent, Tab, Tablink, TabNav } from '../../tabs';
+import { ButtonToggleText } from '../button';
 import { Geo } from '../geo';
 
-const tabs = [
-  {
-    id: 0,
-    title: 'Tab 1',
-    content: 'Some text is here'
-  }, {
-    id: 1,
-    title: 'Tab 2',
-    content: 'Another content'
-  }, {
-    id: 2,
-    title: 'Tab 1',
-    content: 'Third text'
-  }
-];
+
 export class Article extends React.Component {
   constructor() {
     super();
@@ -73,7 +59,81 @@ export class Article extends React.Component {
           users={users}
           clickHandler={this.showPosts}
         /> {preloader && <span>Loading...</span>}
-        <Tabs tabs={tabs} />
+        <Tabs selectedIndex={(new Date()).getDay()}>
+          <Tab>
+            <Tablink title={'Mon'} />
+            <TabContent>
+              <ol>
+                <li><a href="#" class="done">task 1</a></li>
+                <li><a href="#" class="open">task 2</a></li>
+                <li><a href="#" class="done">task 3</a></li>
+              </ol>
+            </TabContent>
+          </Tab>
+
+          <Tab>
+            <Tablink title={'Tue'} />
+            <TabContent>
+              <ol>
+                <li><a href="#" class="done">task 1</a></li>
+                <li><a href="#" class="open">task 2</a></li>
+              </ol>
+            </TabContent>
+          </Tab>
+
+          <Tab>
+            <Tablink title={'Wed'} />
+            <TabContent>
+              <ol>
+                <li><a href="#" class="done">task 1</a></li>
+                <li><a href="#" class="open">task 2</a></li>
+                <li><a href="#" class="done">task 3</a></li>
+              </ol>
+            </TabContent>
+          </Tab>
+
+          <Tab>
+            <Tablink title={'Thu'} />
+            <TabContent>
+              <ol>
+                <li><a href="#" class="done">task 1</a></li>
+                <li><a href="#" class="open">task 2</a></li>
+              </ol>
+            </TabContent>
+          </Tab>
+
+          <Tab>
+            <Tablink title={'Fri'} />
+            <TabContent>
+              <ol>
+                <li><a href="#" class="done">task 1</a></li>
+                <li><a href="#" class="open">task 2</a></li>
+                <li><a href="#" class="done">task 3</a></li>
+              </ol>
+            </TabContent>
+          </Tab>
+
+          <Tab>
+            <Tablink title={'Sat'} />
+            <TabContent>
+              <ol>
+                <li><a href="#" class="done">task 1</a></li>
+                <li><a href="#" class="open">task 2</a></li>
+              </ol>
+            </TabContent>
+          </Tab>
+
+          <Tab>
+            <Tablink title={'Sun'} />
+            <TabContent>
+              <ol>
+                <li><a href="#" class="done">task 1</a></li>
+                <li><a href="#" class="open">task 2</a></li>
+              </ol>
+            </TabContent>
+          </Tab>
+        </Tabs>
+
       </article>
     );
   }

@@ -1,26 +1,16 @@
-
-export const TabNav = ({list, select}) => {
-    const onClick = (e, id) => {
-        select(id);
-        e.preventDefault();
-    };
-
-    return (
-        <nav className="nav-tab">
-            <ul>
-                {list.map(el => (
-                    <li key={el.id}>
-                        <a className="btn btn--tab" href="#" onClick={e => onClick(e, el.id)}>
-                            {el.title}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-        </nav>
-    );
-};
-
-TabNav.propTypes = {
-    click: PropTypes.func,
-    list: PropTypes.array.isRequired
-}
+export const TabNav = ({ children, select, activeIndex }) => (
+    <nav className="nav-tab">
+      <ul> {children.map((el, index) => {
+          const Link = el.type;
+          return (
+            <li
+              key={index}
+              className={activeIndex === index ? 'active' : ''}>
+              <Link {...el.props} 
+                           select={select} 
+                           index={index} />
+            </li>
+          ); }
+        )}
+      </ul> </nav> );
+   
