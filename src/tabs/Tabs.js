@@ -35,5 +35,5 @@ export class Tabs extends React.Component {
     );
   }
 }
-Tabs.propTypes = { selectedIndex: PropTypes.int }
+Tabs.propTypes = { selectedIndex: PropTypes.number }
 Tabs.defaultProps = { selectedIndex: 1 }

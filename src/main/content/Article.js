@@ -7,6 +7,7 @@ import {TaskList, Tasks, Day, Daylink, TaskNav} from '../../taskList';
 import {Form} from '../../form';
 import {ButtonToggleText} from '../button';
 import {Geo} from '../geo';
+import {Timer} from '../Timer';
 
 export class Article extends React.Component {
   constructor() {
@@ -52,6 +53,8 @@ export class Article extends React.Component {
         <Geo/>
         <h2>Counter</h2>
         <Counter/>
+        <h2>Timer</h2>
+        <Timer />
         <h2>Fetch Users</h2>
         <button onClick={this.getUsers}>Get users</button>
         <Persons
@@ -66,13 +69,13 @@ export class Article extends React.Component {
             <TabContent>
               <ol>
                 <li>
-                  <a href="#" class="done">task 1</a>
+                  <a href="#" className="done">task 1</a>
                 </li>
                 <li>
-                  <a href="#" class="open">task 2</a>
+                  <a href="#" className="open">task 2</a>
                 </li>
                 <li>
-                  <a href="#" class="done">task 3</a>
+                  <a href="#" className="done">task 3</a>
                 </li>
               </ol>
             </TabContent>
@@ -83,10 +86,10 @@ export class Article extends React.Component {
             <TabContent>
               <ol>
                 <li>
-                  <a href="#" class="done">task 1</a>
+                  <a href="#" className="done">task 1</a>
                 </li>
                 <li>
-                  <a href="#" class="open">task 2</a>
+                  <a href="#" className="open">task 2</a>
                 </li>
               </ol>
             </TabContent>
@@ -99,13 +102,13 @@ export class Article extends React.Component {
             <Tasks>
               <ol>
                 <li>
-                  <a href="#" class="done">task 1</a>
+                  <a href="#" className="done">task 1</a>
                 </li>
                 <li>
-                  <a href="#" class="open">task 2</a>
+                  <a href="#" className="open">task 2</a>
                 </li>
                 <li>
-                  <a href="#" class="done">task 3</a>
+                  <a href="#" className="done">task 3</a>
                 </li>
               </ol>
             </Tasks>
@@ -115,13 +118,13 @@ export class Article extends React.Component {
             <Tasks>
               <ol>
                 <li>
-                  <a href="#" class="done">task 1</a>
+                  <a href="#" className="done">task 1</a>
                 </li>
                 <li>
-                  <a href="#" class="open">task 2</a>
+                  <a href="#" className="open">task 2</a>
                 </li>
                 <li>
-                  <a href="#" class="done">task 3</a>
+                  <a href="#" className="done">task 3</a>
                 </li>
               </ol>
             </Tasks>
@@ -131,13 +134,13 @@ export class Article extends React.Component {
             <Tasks>
               <ol>
                 <li>
-                  <a href="#" class="done">task 1</a>
+                  <a href="#" className="done">task 1</a>
                 </li>
                 <li>
-                  <a href="#" class="open">task 2</a>
+                  <a href="#" className="open">task 2</a>
                 </li>
                 <li>
-                  <a href="#" class="done">task 3</a>
+                  <a href="#" className="done">task 3</a>
                 </li>
               </ol>
             </Tasks>
@@ -147,13 +150,13 @@ export class Article extends React.Component {
             <Tasks>
               <ol>
                 <li>
-                  <a href="#" class="done">task 1</a>
+                  <a href="#" className="done">task 1</a>
                 </li>
                 <li>
-                  <a href="#" class="open">task 2</a>
+                  <a href="#" className="open">task 2</a>
                 </li>
                 <li>
-                  <a href="#" class="done">task 3</a>
+                  <a href="#" className="done">task 3</a>
                 </li>
               </ol>
             </Tasks>
@@ -163,13 +166,13 @@ export class Article extends React.Component {
             <Tasks>
               <ol>
                 <li>
-                  <a href="#" class="done">task 1</a>
+                  <a href="#" className="done">task 1</a>
                 </li>
                 <li>
-                  <a href="#" class="open">task 2</a>
+                  <a href="#" className="open">task 2</a>
                 </li>
                 <li>
-                  <a href="#" class="done">task 3</a>
+                  <a href="#" className="done">task 3</a>
                 </li>
               </ol>
             </Tasks>
@@ -179,13 +182,13 @@ export class Article extends React.Component {
             <Tasks>
               <ol>
                 <li>
-                  <a href="#" class="done">task 1</a>
+                  <a href="#" className="done">task 1</a>
                 </li>
                 <li>
-                  <a href="#" class="open">task 2</a>
+                  <a href="#" className="open">task 2</a>
                 </li>
                 <li>
-                  <a href="#" class="done">task 3</a>
+                  <a href="#" className="done">task 3</a>
                 </li>
               </ol>
             </Tasks>
@@ -195,13 +198,13 @@ export class Article extends React.Component {
             <Tasks>
               <ol>
                 <li>
-                  <a href="#" class="done">task 1</a>
+                  <a href="#" className="done">task 1</a>
                 </li>
                 <li>
-                  <a href="#" class="open">task 2</a>
+                  <a href="#" className="open">task 2</a>
                 </li>
                 <li>
-                  <a href="#" class="done">task 3</a>
+                  <a href="#" className="done">task 3</a>
                 </li>
               </ol>
             </Tasks>

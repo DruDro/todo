@@ -42,7 +42,7 @@ export class Form extends React.Component {
           {this
             .fields
             .map(field => (
-              <li key={field.index}>
+              <li key={Math.floor(Math.random()*100)}>
                 {
                   <input
                     type="text"

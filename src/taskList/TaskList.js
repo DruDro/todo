@@ -34,5 +34,5 @@ export class TaskList extends React.Component {
     );
   }
 }
-TaskList.propTypes = { selectedIndex: PropTypes.int }
+TaskList.propTypes = { selectedIndex: PropTypes.number }
 TaskList.defaultProps = { selectedIndex: 1 }
