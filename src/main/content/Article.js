@@ -1,5 +1,4 @@
 import './article.scss';
-import {Counter} from '../Counter';
 import {Persons} from '../Persons';
 import {Numbers} from '../../numbers';
 import {Tabs, TabContent, Tab, Tablink, TabNav} from '../../tabs';
@@ -8,6 +7,7 @@ import {Form} from '../../form';
 import {ButtonToggleText} from '../button';
 import {Geo} from '../geo';
 import {Timer} from '../Timer';
+import {Lifecycle} from '../lifecycle/parent';
 
 export class Article extends React.Component {
   constructor() {
@@ -51,18 +51,20 @@ export class Article extends React.Component {
           toggleText="This button implements 2 tasks: 'toggle button class .active' &amp; 'toggle button text and the related text-box'"/>
           <h2>Show Geo-Position</h2>
         <Geo/>
-        <h2>Counter</h2>
-        <Counter/>
-        <h2>Timer</h2>
-        <Timer />
         <h2>Fetch Users</h2>
         <button onClick={this.getUsers}>Get users</button>
         <Persons
           userName={userName}
           userPosts={userPosts}
           users={users}
-          clickHandler={this.showPosts}/> {preloader && <span>Loading...</span>}
-          <h2>Tabs</h2>
+          clickHandler={this.showPosts}/> 
+        {preloader && <span>Loading...</span>}
+        
+        <h2>Lifecycle Timer</h2>
+        <Timer />
+        <h2>Lifecycle Counter-Painter</h2>
+        <Lifecycle />
+        <h2>Tabs</h2>
         <Tabs selectedIndex={1}>
           <Tab>
             <Tablink title={'Tab 1'}/>
