@@ -3,6 +3,10 @@ import { request } from 'services/request';
 import { store } from 'store';
 
 export class Account extends Component {
+  constructor(props){
+    super(props);
+    this.title = "Account";
+  }
   update(form) {
     const oldPassword = document.querySelector('#password').value,
       newPassword = document.querySelector('#newPassword').value,
@@ -24,6 +28,9 @@ export class Account extends Component {
         form.classList.add('animated', 'shake');
         setTimeout(() => form.classList.remove('animated', 'shake'), 300);
       }
+  }
+  componentWillMount(){
+      this.props.updateTitle(this.title);
   }
   render() {
     return (

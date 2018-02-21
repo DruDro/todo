@@ -10,6 +10,7 @@ moment.locale('ru');
 export class Weeks extends Component {
     constructor(props) {
         super(props);
+        this.title = "My to-dos";
         this.state = { 
             week: moment(props.match.params.date, 'D-M-YYYY').week(), 
             date: props.match.params.date, 
@@ -57,6 +58,9 @@ export class Weeks extends Component {
             animation:"",
             animationForDate: ''
         }), 450)
+    }
+    componentWillMount(){
+        this.props.updateTitle(this.title);
     }
     render() {
         return (

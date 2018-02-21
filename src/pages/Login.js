@@ -4,6 +4,10 @@ import { store } from 'store';
 import { NavLink, Redirect } from 'react-router-dom';
 
 export class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.title = "Login";
+  }
   login = (form) => {
     const login = document.querySelector('#login').value,
       password = document.querySelector('#password').value;
@@ -19,6 +23,9 @@ export class Login extends Component {
           setTimeout(() => form.classList.remove('animated', 'shake'), 300);
         }
       });
+  }
+  componentWillMount(){
+      this.props.updateTitle(this.title);
   }
   render() {
     return (

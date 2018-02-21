@@ -6,6 +6,10 @@ import { store } from 'store';
 const moment = require('moment');
 
 export class Register extends Component {
+  constructor(props) {
+    super(props);
+    this.title = "Create account";
+  }
   register(form) {
     const login = document.querySelector('#login').value,
       password = document.querySelector('#password').value,
@@ -35,6 +39,9 @@ export class Register extends Component {
           alert(`A user with login "${login}" already exists`)
         }
       });
+  }
+  componentWillMount(){
+      this.props.updateTitle(this.title);
   }
   render() {
     return (

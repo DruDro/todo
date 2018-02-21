@@ -8,8 +8,12 @@ import './app.scss';
 const moment = require('moment');
 
 export class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state = { title: '' }
+  }
+  updateTitle = title => {
+    this.setState({ title })
   }
   componentWillMount() {
     if(localStorage.getItem('loggedIn') === 'true'){
@@ -21,8 +25,9 @@ export class App extends Component {
   render() {
     return (
       <section className="wrapper">
-        <Header />
+        <Header title={ this.state.title } />
         <main className="main">
+        
             <Switch>
               <Route exact path="/" render={() => {
                 if (store.getState().signin.loggedIn) {
@@ -35,19 +40,19 @@ export class App extends Component {
                 if (store.getState().signin.loggedIn) {
                   return <Redirect to="/to-dos" />
                 } else {
-                  return <Login />
+                  return <Login updateTitle={ this.updateTitle } />
                 }
               }} />
               <Route exact path="/register" render={() => {
                 if (store.getState().signin.loggedIn) {
                   return <Redirect to="/to-dos" />
                 } else {
-                  return <Register />
+                  return <Register updateTitle={ this.updateTitle } />
                 }
               }} />
               <Route exact path="/account" render={() => {
                 if (store.getState().signin.loggedIn) {
-                  return <Account />
+                  return <Account updateTitle={ this.updateTitle } />
                 } else {
                   return <Redirect to="/login" />
                 }
@@ -61,14 +66,14 @@ export class App extends Component {
               }} />
               <Route exact path="/to-dos/active" render={(props) => {
                 if (store.getState().signin.loggedIn) {
-                  return <Incomplete {...props} />
+                  return <Incomplete {...props} updateTitle={ this.updateTitle } />
                 } else {
                   return <Redirect to="/login" />
                 }
               }} />
               <Route exact path="/to-dos/:date" render={(props) => {
                 if (store.getState().signin.loggedIn) {
-                  return <Weeks {...props} />
+                  return <Weeks {...props} updateTitle={ this.updateTitle } />
                 } else {
                   return <Redirect to="/login" />
                 }

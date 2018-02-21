@@ -42,8 +42,8 @@ export class Navigation extends Component {
     const user = store.getState().signin.user;
     return (
       <nav className="main-nav">
-        <b className="logo">&#8986; React To-Dos</b>
-        
+        <b className="logo">&#8986; logo</b>
+        <h1 className="page-title">{ this.props.title }</h1>
         {
           user ?<button
           ref="menuBtn"

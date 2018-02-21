@@ -4,6 +4,7 @@ import { store } from 'store';
 export class Incomplete extends Component {
 	constructor(){
 		super();
+		this.title = "Active to-dos";
 		this.state = {tasks:[], userId: null};
 	}
 	getTasks(userId = this.state.userId) {
@@ -41,6 +42,7 @@ export class Incomplete extends Component {
 	componentWillMount() {
     const userId = store.getState().signin.user.id;
 		this.getTasks(userId);
+		this.props.updateTitle(this.title);
 	}
 	render() {
 		const { tasks } = this.state;

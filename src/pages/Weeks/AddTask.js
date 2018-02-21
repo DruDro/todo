@@ -38,7 +38,6 @@ export class AddTask extends Component {
                             placeholder="Title"
                             maxLength="80"
                             minLength="3"
-                            autoFocus
                         />
                         <label htmlFor="">To-do description
                         </label>

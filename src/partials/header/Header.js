@@ -2,12 +2,10 @@
 import { Navigation } from '../navigation/index';
 import './header.scss';
 
-export const Header = () => {
+export const Header = (props) => {
   return (
     <header className="header">
-      <div className="container">
-        <Navigation />
-      </div>
+      <Navigation title={ props.title } />
     </header>
   );
 };
