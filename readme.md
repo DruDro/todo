@@ -1,13 +1,13 @@
-# Install dependencies
+## Install dependencies
 ```bash
 npm i
 ```
-# Run json database server with REST API
+## Run json database server with REST API
 ```bash
 npm run db
 ```
 This launches your db.json at localhost:3001
-# Run the application
+## Run the application
 ```bash
 npm start
 ```
