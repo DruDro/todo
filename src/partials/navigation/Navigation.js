@@ -10,7 +10,7 @@ class Logout extends Component {
   }
   render() {
     return (
-        <a className="btn" onClick={this.logout.bind(this)}>&#9758; Logout</a>
+        <a className="btn" onClick={this.logout.bind(this)}>{'\u21AA'} Logout</a>
     )
   }
 };
@@ -41,7 +41,7 @@ export class Navigation extends Component {
     const user = store.getState().signin.user;
     return (
       <nav className="main-nav">
-        <b className="logo">&#8986; logo</b>
+        <b className="logo">to_doos</b>
         <h1 className="page-title">{ this.props.title }</h1>
         {
           user ?<button
@@ -63,7 +63,7 @@ export class Navigation extends Component {
                   className="btn"
                   to="/to-dos"
                 >
-                &#9745;  My to-dos
+                {'\u2714'}  My to-dos
                 </NavLink>
               </li>
               <li>
@@ -72,7 +72,7 @@ export class Navigation extends Component {
                   className="btn"
                   to="/to-dos/active"
                 >
-                &#9744;  Active
+                {'\u26AA'}  Active
                 </NavLink>
               </li>
               <li>
@@ -81,7 +81,7 @@ export class Navigation extends Component {
                   className="btn"
                   to="/account"
                 >
-                  &#9812; { user.displayName }
+                  {'\u263A'} { user.displayName }
                 </NavLink>
               </li>
               <li>
