@@ -37,7 +37,7 @@
     {
       "completed": false,
       "createdAt": "19-2-2018",
-      "date": "19-2-2018",
+      "date": "21-2-2018",
       "userId": "4EULaVX",
       "description": "Need modern design",
       "title": "Re-design the app",
@@ -46,7 +46,7 @@
     {
       "completed": true,
       "createdAt": "21-2-2018",
-      "date": "19-2-2018",
+      "date": "21-2-2018",
       "userId": "4EULaVX",
       "description": "Need responsive design for desktop->mobile",
       "title": "Add responsiveness",
@@ -55,7 +55,7 @@
     {
       "completed": true,
       "createdAt": "21-2-2018",
-      "date": "19-2-2018",
+      "date": "21-2-2018",
       "userId": "4EULaVX",
       "description": "Need a date-picker with navigation ability",
       "title": "Add calendar ",

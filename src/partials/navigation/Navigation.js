@@ -30,7 +30,6 @@ export class Navigation extends Component {
     }
   }
   handleClickOutside = (event) => {
-    console.log(event.target, this.refs.menuBbn)
     if (this.refs.menuBtn && !this.refs.menuBtn.contains(event.target)) {
       this.setState({menuActive: ''})
     }
