@@ -1,0 +1,17 @@
+.footer {
+	padding: 15px 0;
+	@media screen and (max-width: 767px) {
+		padding: 5px 0;
+	}
+}
+
+.footer, .footer .container {
+	background: #eee;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer .container {
+  background: transparent;
+  color: inherit;
+}

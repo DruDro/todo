@@ -1,0 +1,156 @@
+@import '../node_modules/normalize.css/normalize.css';
+@import 'variables';
+@import './assets/animate.css';
+* {
+  box-sizing: border-box;
+}
+::selection {
+  background:#00606d;
+  color:#fff;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+}
+
+body {
+  background: $main-bg;
+  font: $font;
+  color: $main-f-color;
+  min-width: 320px;
+  overflow: hidden;
+}
+
+#app {
+	height: 100vh;
+	overflow: auto;
+	position: relative;
+}
+
+.wrapper {
+	position: relative;
+  height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
+  overflow: hidden;
+}
+.main {
+  flex: 1 1 auto;
+  display:flex;
+  overflow-x: hidden;
+  overflow-y:auto;
+}
+.header {
+  flex: 0 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 960px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+a {
+  color: $a-color;
+
+}
+
+button, .btn, [type="button"],[type="submit"] {
+  outline: 0;
+  border: 1px solid #aaa;
+  display: inline-block;
+  padding: 12px 15px;
+  white-space: normal;
+  text-align: center;
+  border-radius: 0;
+  background: #eee;
+  color: #454545;
+  margin: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .15s ease-in-out;
+  cursor: pointer;
+  &:hover{
+    background:#fff;
+  }
+}
+
+
+// animate css overrides
+.animated {
+  animation-duration: .3s;
+}
+
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.login-form {
+  width:600px;
+  max-width:100%;
+  margin:15px auto;
+  min-height:100%;
+  align-self:center;
+  
+  button {
+    width: 100%;
+    margin: 15px auto 0;
+  }
+  label,
+  input {
+      display: block;
+      margin: 0;
+  }
+  label {
+      margin: 10px 0 5px;
+      display: block;
+      color: #454545;
+  }
+  .hint {
+      display: block;
+      line-height: 1em;
+      padding: 4px 0;
+      font-size: .8em;
+      color: #777;
+  }
+  input {
+      width: 100%;
+      border: 0;
+      transition: all .3s ease-in-out;
+      background: #f5f5f5;
+      padding: 5px 10px;
+      line-height: 1.4em;
+      &:focus {
+          outline: 0;
+          background: #eee;
+      }
+      &:invalid {
+          &:focus {
+              background: antiquewhite;
+          }
+      }
+  }
+}

@@ -1,0 +1,277 @@
+.tasks-tabs {
+    padding: 0;
+    width:100%;
+    .nav-tab {
+        border-bottom:1px solid #aaa;
+        background:#eee;
+        ul{
+        width:960px;
+        max-width:100%;
+        margin:0 auto;
+        padding: 0 15px;}
+    }
+    &__header {
+        padding:10px 0;
+        @media screen and (max-width: 767px) {
+            display:none;
+        }
+        .container {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        button {
+            border:0;
+            background:#eee;
+            position:relative;
+            z-index:1;
+        }
+        .week {
+            color: #00606d;
+            padding: 0 15px;
+            line-height: 34px;
+            height: 34px;
+        }
+    }
+}
+
+.tasks-date {
+    text-align: center;
+    padding: 15px;
+    color: #00606d;
+    font-weight: 700;
+    position: relative;
+    z-index: 9999;
+    button {
+        border:0;
+    }
+    .react-date-picker__button {
+        border:0;
+        &__input {
+            display:none;
+        }
+    }
+    .react-date-picker__clear-button {
+        display:none;
+    }
+    .react-date-picker__calendar {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .react-calendar__tile--active {
+        background:#fff;
+    }
+}
+
+.task-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &.incomplete {
+        width: 100%;
+    }
+    li {
+        padding: 8px 0;
+        margin: 0;
+        &:nth-child(odd) {
+            background: #fafafa;
+        }
+    }
+}
+
+.task-add-form {
+    margin: 15px auto !important;
+    display: block;
+    padding: 15px 0;
+    display: block;
+    fieldset {
+        border: 0;
+        padding: 1.2rem 0 0;
+        border-top: 1px dotted #aaa;
+        position:relative;
+    }
+    legend {
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding: 0 5px;
+        position:absolute;
+        top:-.8rem;
+        background:#fff;
+        left:50%;
+        transform:translateX(-50%);
+        text-align:center;
+        @media screen and (max-width: 767px) {
+            font-size:1em;
+        }
+    }
+    button {
+        width: 100%;
+        margin: 15px auto 0;
+    }
+    label,
+    textarea, [type="text"] {
+        display: block;
+        margin: 0;
+    }
+    label {
+        margin: 10px 0 5px;
+        display: block;
+        color: #454545;
+    }
+    .hint {
+        display: block;
+        line-height: 1em;
+        padding: 4px 0;
+        font-size: .8em;
+        color: #777;
+    }
+    textarea,[type="text"] {
+        width: 100%;
+        border: 0;
+        transition: all .3s ease-in-out;
+        background: #f5f5f5;
+        padding: 5px 10px;
+        line-height: 1.4em;
+        resize:vertical;
+        &:focus {
+            outline: 0;
+            background: #eee;
+        }
+        &:invalid {
+            &:focus {
+                background: antiquewhite;
+            }
+        }
+    }
+    textarea {
+        height:4.8em;
+    }
+}
+
+.task-update-form {
+    position: relative;
+    padding:0 15px 0 60px !important;
+    textarea, [type="text"] {
+        position: relative;
+        width: calc(100% - 45px);
+        border: 1px solid transparent;
+        -webkit-appearance: none;
+        background: transparent;
+        padding: 5px 10px;
+        line-height: 1.4em;
+        outline:0;
+        border:0;
+        transition:all .3s ease-in-out;
+        &:focus {
+            outline: 0;
+            background: #f5f5f5;
+        }
+        &:invalid {
+            &:focus {
+                background: antiquewhite;
+            }
+        }
+    }
+    textarea {
+        resize:none;
+        overflow:hidden;
+        height:1.5em;
+        &:focus {
+            overflow:auto;
+            height:4.8em;
+            resize:vertical;
+        }
+    }
+    .task-title {
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+    .hint {
+        display: none;
+    }
+     :invalid~.hint {
+        display: block;
+        line-height: 1em;
+        padding: 4px 10px 4px 11px;
+        font-size: .8em;
+        color: #777;
+    }
+    .delete-task {
+        position: absolute;
+        outline: 0;
+        background: transparent;
+        color: #8f153a;
+        right: 15px;
+        top: 50%;
+        margin: -15px 0 0;
+        display: block;
+        padding: 0;
+        line-height: 30px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        -webkit-appearance: none;
+        border-radius: 50%;
+        border:0;
+        overflow: hidden;
+        &:hover {
+            transform: rotate(90deg)
+        }
+    }
+    [name^="complete_"] {
+        display: none;
+        &+label {
+            display: block;
+            position: absolute;
+            top: calc(50% - 15px);
+            left: 15px;
+            height: 30px;
+            width: 30px;
+            font-size: 0;
+            line-height: 0;
+            background: transparent;
+            border: 1px solid #aaa;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+            transition: all .3s ease-in-out;
+            -webkit-appearance: none;
+            &:hover {
+                background: rgba(#454545, .1);
+                border-color:#00606d;
+            }
+            &:before,
+            &:after {
+                content: '';
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                display: block;
+                width: 2px;
+                height: 15px;
+                top: 50%;
+                left: 50%;
+                transform: rotate(35deg) translate(-50%, -50%);
+                margin: -3px 0 0 -6px;
+                transform-origin: bottom center;
+                background: #fff;
+                transition: all .3s ease-in-out;
+            }
+            &:after {
+                height: 6px;
+                transform: rotate(-45deg);
+                margin: -1px 0 0 -2px;
+            }
+        }
+        &:checked+label {
+            background: #00606d;
+            border-color:#00606d;
+            &:before,
+            &:after {
+                opacity: 1;
+                visibility: visible
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "createdAt": "14-2-2018",
+      "displayName": "DruDro",
+      "login": "drudro",
+      "password": "8fajrero"
+    },
+    {
+      "createdAt": "19-2-2018",
+      "displayName": "TestUser",
+      "login": "test",
+      "password": "testtest",
+      "id": "4EULaVX"
+    }
+  ],
+  "tasks": [
+    {
+      "completed": true,
+      "createdAt": "19-2-2018",
+      "date": "16-2-2018",
+      "userId": "1",
+      "description": "",
+      "title": "Test to-do without description",
+      "id": 2
+    },
+    {
+      "completed": false,
+      "createdAt": "16-2-2018",
+      "date": "16-2-2018",
+      "userId": "1",
+      "description": "Test description for the test to-do",
+      "title": "Described test to-do",
+      "id": 3
+    },
+    {
+      "completed": false,
+      "createdAt": "21-2-2018",
+      "date": "21-2-2018",
+      "userId": "4EULaVX",
+      "description": "Need modern design",
+      "title": "Re-design the app",
+      "id": 7
+    },
+    {
+      "completed": false,
+      "createdAt": "21-2-2018",
+      "date": "21-2-2018",
+      "userId": "4EULaVX",
+      "description": "Need responsive design for desktop->mobile",
+      "title": "Add responsiveness",
+      "id": 8
+    },
+    {
+      "completed": true,
+      "createdAt": "21-2-2018",
+      "date": "21-2-2018",
+      "userId": "4EULaVX",
+      "description": "Need a date-picker with navigation ability",
+      "title": "Add calendar ",
+      "id": 9
+    }
+  ]
+}
