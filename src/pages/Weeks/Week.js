@@ -116,8 +116,7 @@ export class Week extends Component {
                     onChange={this.goToDate}
                     value={new Date(moment(this.state.date, 'D-M-YYYY').format())}
                   />
-                  
-                  {/* <input type="date" value={ moment(this.state.date, 'D-M-YYYY').format('YYYY-MM-DD') } onChange={e => this.goToDate(e.target.value)} id="date"/> */}
+                  <span className="selected-date">{ moment(this.state.date, 'D-M-YYYY').format('D.M.YYYY') }</span>
                 </div>
                 
                 { tasks.length ? 

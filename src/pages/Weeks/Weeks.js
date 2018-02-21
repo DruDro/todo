@@ -67,13 +67,13 @@ export class Weeks extends Component {
             <section className="tasks-tabs">
                 <header className="tasks-tabs__header">
                     <div className="container">
-                        <button onClick={ this.prevWeek.bind(this) }>&#8672; previous week</button>
+                        <button title="Previous week" onClick={ this.prevWeek.bind(this) }>&#8672;</button>
                         <span
                             className={ `week ${this.state.animation}` }
                             ref={ weekNumber => this.weekNumber = weekNumber } >
-                            {`${moment().day(1).week(this.state.week).format('D.M.YYYY')} \u2014 ${moment().day(7).week(this.state.week).format('D.M.YYYY')}`}
+                            {`Week: ${moment().day(1).week(this.state.week).format('D.M.YYYY')} \u2014 ${moment().day(7).week(this.state.week).format('D.M.YYYY')}`}
                         </span>
-                        <button onClick={ this.nextWeek.bind(this) }>next week &#8674;</button>
+                        <button title="Next week" onClick={ this.nextWeek.bind(this) }>&#8674;</button>
                     </div>
                 </header>
                 <Week 

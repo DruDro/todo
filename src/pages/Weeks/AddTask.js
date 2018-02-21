@@ -28,7 +28,7 @@ export class AddTask extends Component {
         return (
             <form id="addTask" className="task-add-form" onSubmit={e => {e.preventDefault(); this.addTask()}}>
                 <fieldset>
-                    <legend>Add a new to-do for {moment(this.props.date,'D-M-YYYY').format('D.M.YYYY')}</legend>
+                    <legend>Add To-Do</legend>
                     <div className="container">
                         <label htmlFor="">To-do</label>
                         <input 

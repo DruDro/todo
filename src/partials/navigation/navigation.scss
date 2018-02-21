@@ -9,8 +9,11 @@
     .logo {    
       line-height: 30px;
       height: 30px;
-      flex: 0 0 auto;
+      flex: 0 0 210px;
       margin: 10px 0;
+      @media screen and (max-width: 767px) {
+          flex: 0 0 auto
+      }
     }
     &>ul {
         display: flex;

@@ -19,7 +19,7 @@
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
         }
         button {
             border:0;
@@ -38,13 +38,39 @@
 
 .tasks-date {
     text-align: center;
-    padding: 15px;
-    color: #00606d;
-    font-weight: 700;
-    position: relative;
-    z-index: 9999;
+	padding: 15px;
+	color: #00606d;
+	font-weight: 700;
+	position: relative;
+	z-index: 9999;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
     button {
         border:0;
+    }
+    .selected-date {
+        padding: 0 43px 0 15px;
+        position: absolute;
+        background: #eee;
+        height: 43px;
+        line-height: 43px;
+        width:150px;
+        z-index: 9998;
+    }
+    .react-date-picker__calendar-button {
+        width:150px;
+        background:transparent;
+        position:relative;
+        z-index:9999;
+        &:hover {
+            background:rgba(#fff, .3);
+        }
+        svg {
+            margin:0 0 0 auto;
+            transition:all .15s ease-in-out;
+        }
     }
     .react-date-picker__button {
         border:0;
