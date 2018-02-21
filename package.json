@@ -1,12 +1,12 @@
 {
   "name": "todo",
   "version": "1.0.0",
-  "description": "",
+  "description": "To-do application made with React.js and Redux.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "db": "json-server --watch db.json  --port 3001",
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 3000 --hot  --open",
+    "start": "webpack-dev-server --config webpack.config.js --port 3000 --hot  --open",
     "lint": "./node_modules/eslint/bin/eslint.js src/**/**.js"
   },
   "keywords": [
@@ -61,5 +61,13 @@
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4",
     "yargs": "^10.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DruDro/todo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DruDro/todo/issues"
+  },
+  "homepage": "https://github.com/DruDro/todo#readme"
 }
