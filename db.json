@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "createdAt": "14-2-2018",
-      "displayName": "DruDro",
-      "login": "drudro",
-      "password": "8fajrero"
-    },
-    {
       "createdAt": "19-2-2018",
       "displayName": "TestUser",
       "login": "test",
