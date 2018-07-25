@@ -1,5 +1,5 @@
 
-const db = 'http://192.168.0.104:3001/';
+const db = 'http://localhost:3001/';
 export const request = (url, method='GET', data) => {
     let options = {
         method: method,

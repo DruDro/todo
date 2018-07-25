@@ -1,4 +1,4 @@
-export const Tablink = ({ title, index, select }) => {
+export const Tablink = ({ title, date, index, select }) => {
   const onClick = (e) => {
     select(index);
     /*
@@ -13,7 +13,8 @@ export const Tablink = ({ title, index, select }) => {
     <a
       href="#"
       onClick={onClick}
-      className="btn btn--tab"
+	  className="btn btn--tab"
+	  title={date}
     >
       {title}
     </a>

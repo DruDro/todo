@@ -71,7 +71,13 @@ export class Weeks extends Component {
                         <span
                             className={ `week ${this.state.animation}` }
                             ref={ weekNumber => this.weekNumber = weekNumber } >
-                            {`Week: ${moment().day(1).week(this.state.week).format('D.M.YYYY')} \u2014 ${moment().day(7).week(this.state.week).format('D.M.YYYY')}`}
+							{`Week: ${moment()
+										.day(1)
+										.week(this.state.week)
+										.format('D.M.YYYY')} \u2014 ${moment()
+																		.day(7)
+																		.week(this.state.week)
+																		.format('D.M.YYYY')}`}
                         </span>
                         <button title="Next week" onClick={ this.nextWeek.bind(this) }>&#8674;</button>
                     </div>

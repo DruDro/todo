@@ -35,6 +35,7 @@
   width: 100%;
   font-size:1.2em;
   font-weight: 300;
+  position: relative;
   &:hover,  &:focus {
       background: #fff !important;
   }
@@ -44,6 +45,14 @@
     height:30px;
     line-height:30px !important;
     position:relative;
+  }
+  .date {
+	  position:absolute;
+	  background: rgba(#fff,.5);
+	  top:100%;
+	  font-size:12px;
+	  left:50%;
+	  transform:translateX(-50%)
   }
 }
 
