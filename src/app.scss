@@ -95,7 +95,14 @@ button, .btn, [type="button"],[type="submit"] {
     background:#fff;
   }
 }
-
+.btn--wide{
+	display: block!important;
+    width: 100%;
+    margin: 5px auto;
+}
+.btn--round{
+	border-radius:25px;
+}
 
 // animate css overrides
 .animated {
