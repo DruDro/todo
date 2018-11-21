@@ -1,5 +1,5 @@
 
-const db = 'http://localhost:4444/api/';
+const db = '/api/';
 export const request = (url, method='GET', data) => {
     let options = {
         method: method,
@@ -11,5 +11,5 @@ export const request = (url, method='GET', data) => {
     if(data)  options.body = JSON.stringify(data); 
 	return fetch(`${db}${url}`, options)
 			.then(res => res.json())
-			.catch(err => {console.log('DB connection is not okay')})
+			.catch(err => {console.log(process.env.PORT + 'DB connection is not okay')})
 }
