@@ -16,4 +16,4 @@ const port = process.env.PORT || 4444;
 app.set('port', port);
 
 const server = http.createServer(app);
-server.listen(port, () => console.log(`Running server | Listening to port ${port}`));
+server.listen(port, () => console.log(`${server.address().address}:${server.address().port}`));
