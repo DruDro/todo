@@ -617,10 +617,14 @@ button.react-calendar__tile--active:enabled:focus {
 
 .popup {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: auto;
+  min-width: 300px;
+  height: auto;
+  min-height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 1000px rgba(0, 0, 0, 0.3);
   background: #fff;
   display: flex;
   align-items: center;
