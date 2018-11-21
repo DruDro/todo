@@ -52,12 +52,12 @@
 		border: 0;
 	}
 	.selected-date {
-		padding: 0 43px 0 15px;
+		padding: 0 50px 0 15px;
 		position: absolute;
 		background: #eee;
 		height: 43px;
 		line-height: 43px;
-		width: 150px;
+		width: 170px;
 		z-index: 9998;
 	}
 	.react-date-picker__calendar-button {
@@ -317,6 +317,8 @@
 	align-items:center;
 	justify-content:center;
 	z-index:99999;
+	opacity:1;
+	visibility:visible;
 	&-close {
 		position: absolute;
 		right: 15px;
@@ -325,5 +327,8 @@
 	form {
 		width:100%;
 	}
-	
+	&.hidden{
+		visibility:hidden;
+		opacity:0;
+	}
 }

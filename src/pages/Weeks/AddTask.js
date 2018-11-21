@@ -19,7 +19,7 @@ export class AddTask extends Component {
       userId: this.props.userId,
       description: descr.value,
       title: title.value
-    }).then(() => this.props.getTasks(this.props.userId)).then(() => form.reset());
+    }).then(() => this.props.getTasks(this.props.userId)).then(() => form.reset()).then(()=>this.togglePopup());
 
   }
   togglePopup() {
@@ -30,7 +30,7 @@ export class AddTask extends Component {
     return (
       <div className="add-task">
         <div className="container">
-          <button onClick={this.togglePopup.bind(this)}>+</button>
+          <button className="btn--wide btn--round" onClick={this.togglePopup.bind(this)}>Add todo</button>
         </div>
         <div className={`${this.state.toggleAddTaskPopup} popup`} >
           <button className="popup-close" onClick={this.togglePopup.bind(this)}>&#10005;</button>
