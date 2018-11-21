@@ -13,8 +13,8 @@ export class Login extends Component {
       password = document.querySelector('#password').value;
 
     request(`users?login=${login}&password=${password}`)
-      .then((user) => {
-        if (user.length) {
+      .then(user => {
+        if (user) {
           store.dispatch({ type: 'LOG_IN', user: user[0] });
           localStorage.setItem('loggedIn', 'true');
           localStorage.setItem('user', JSON.stringify(user[0]));

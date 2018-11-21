@@ -8,8 +8,10 @@ export class Incomplete extends Component {
 		this.state = {tasks:[], userId: null};
 	}
 	getTasks(userId = this.state.userId) {
-		request(`tasks?userId=${userId}`).then(tasks => tasks.reverse().filter(task => task.completed == false)).then(tasks => {
-			this.setState({userId, tasks});
+		request(`tasks?userId=${userId}`)
+			.then(tasks => tasks.reverse().filter(task => task.completed == false))
+			.then(tasks => {
+				this.setState({userId, tasks});
 		});
 	}
   deleteTask(task) {
@@ -98,7 +100,7 @@ export class Incomplete extends Component {
 							title='Delete to-do'
 						>
 							&#x2573;
-					</button>
+						</button>
 					</form>
 				</li>
 			)}
