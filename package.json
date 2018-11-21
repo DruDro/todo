@@ -70,5 +70,8 @@
   "bugs": {
     "url": "https://github.com/DruDro/todo/issues"
   },
-  "homepage": "https://github.com/DruDro/todo#readme"
+  "homepage": "https://github.com/DruDro/todo#readme",
+  "devDependencies": {
+    "heroku-cli": "^7.0.9"
+  }
 }
