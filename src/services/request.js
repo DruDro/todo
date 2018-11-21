@@ -1,4 +1,4 @@
-const db = 'http://localhost:4444/api/';
+const db = `http://${window.location.hostname}:16548/api/`;
 export const request = (url, method='GET', data) => {
     let options = {
         method: method,
